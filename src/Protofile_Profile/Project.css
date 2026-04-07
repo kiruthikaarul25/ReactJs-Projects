@@ -1,0 +1,191 @@
+/* Projects.css */
+
+/* ===== Variables (CSS Custom Properties) ===== */
+:root {
+  --primary-color: #2c3e66;
+  --accent-color: #ef664e;
+  --grey-bg: #e9ecef;
+  --white-card: #ffffff;
+  --text-dark: #1e2a3a;
+  --text-light: #6c7a89;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+background: linear-gradient(135deg, #6bb5e8 0%, #4682b4 30%, #2c7da0 70%, #1e5a8a 100%);  padding: 5rem 2rem;
+}
+
+.projects .title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  position: relative;
+  font-weight: 600;
+}
+
+.projects .title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+/* Project Grid Container */
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: var(--white-card);
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.project-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.project-card span {
+  display: inline-block;
+  background: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+}
+
+.project-card:hover span {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+    padding: 3rem 1.2rem;
+  }
+
+  .projects .title {
+    font-size: 2rem;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 2rem 1rem;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+}
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #1e2a3a;
+}
+
+.search-input::placeholder {
+  color: #adb5bd;
+  font-weight: 400;
+}
+
+.search-input:focus {
+  border-color: #ff7e67;
+  box-shadow: 0 0 0 3px rgba(255, 126, 103, 0.2);
+  background: #ffffff;
+}
+
+.search-input:hover {
+  border-color: #c0c4c8;
+}
+
+/* Optional: Add a search icon inside the input */
+.search-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+}
+
+.search-wrapper::before {
+  content: '🔍';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #adb5bd;
+  pointer-events: none;
+}
+
+.search-wrapper .search-input {
+  padding-left: 40px;
+  margin: 0;
+}
