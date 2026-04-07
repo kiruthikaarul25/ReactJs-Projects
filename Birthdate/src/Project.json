@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "desc": "Personal portfolio showcasing skills and projects.",
+      "tech": "React.js, SCSS, CSS"
+    },
+    {
+      "title": "Event Management System",
+      "desc": "Web app to manage and organize events.",
+      "tech": "HTML, CSS, Java, Spring Boot, MySQL"
+    },
+    {
+      "title": "Job Portal",
+      "desc": "Full stack job portal with login and job apply system.",
+      "tech": "HTML, CSS, Java, Servlets, JDBC, MySQL"
+    },
+    {
+      "title": "Signup/Login",
+      "desc": "Authentication system using Servlets and JDBC.",
+      "tech": "HTML, CSS, Java, MySQL"
+    },
+    {
+      "title": "Frontend Projects",
+      "desc": "10+ UI projects using HTML, CSS, JS.",
+      "tech": "HTML, CSS, JavaScript"
+    },
+    {
+      "title": "CRUD App",
+      "desc": "Create, Read, Update, Delete operations.",
+      "tech": "Java, JDBC, MySQL"
+    },
+    {
+      "title": "Responsive UI",
+      "desc": "Mobile-friendly UI designs.",
+      "tech": "HTML, CSS, Sass"
+    }
+  ]
+}
