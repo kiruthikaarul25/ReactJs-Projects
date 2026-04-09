@@ -1,0 +1,103 @@
+$card-bg: #ffffff;
+$card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+$card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+$border-radius: 16px;
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$left-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$left-text: white;
+$right-bg: #f8f9fa;
+$right-border: #e9ecef;
+
+$skill-bg: #e9ecef;
+$skill-color: #495057;
+$skill-hover-bg: #dee2e6;
+
+section{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.card {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: $card-bg;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: $font-primary;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $card-hover-shadow;
+  }
+
+  .card-left {
+    flex: 1;
+    background: $left-bg;
+    color: $left-text;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+  }
+
+  .card-right {
+    flex: 1;
+    background: $right-bg;
+    padding: 2rem;
+    border-left: 1px solid $right-border;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        background: $skill-bg;
+        color: $skill-color;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 20px;
+        display: inline-block;
+        margin-right: 0.5rem;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: $skill-hover-bg;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    .card-right {
+      border-left: none;
+      border-top: 1px solid $right-border;
+    }
+  }
+}
